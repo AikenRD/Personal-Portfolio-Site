@@ -1,0 +1,222 @@
+:root {
+    --navy: #172a46;
+    --blue: #24527a;
+    --gold: #f2b84b;
+    --pale-gold: #fff2cf;
+    --cloud: #f4f7fb;
+    --white: #ffffff;
+    --ink: #202936;
+    --muted: #536174;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--cloud);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 0;
+    padding-bottom: 0.45rem;
+    border-bottom: 3px solid var(--gold);
+    color: var(--navy);
+}
+
+a {
+    color: var(--blue);
+}
+
+.site-header {
+    padding: 2rem 1rem;
+    border-bottom: 7px solid var(--gold);
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.site-header > p {
+    max-width: 760px;
+    margin: 0.75rem auto 1.5rem;
+    color: var(--pale-gold);
+}
+
+.site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav li {
+    min-width: 0;
+}
+
+.site-nav a {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 2px solid var(--gold);
+    border-radius: 0.45rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a[aria-current="page"] {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    width: min(100% - 1.5rem, 1120px);
+    margin: 1.5rem auto;
+}
+
+.panel,
+.project-card,
+.feature-box {
+    min-width: 0;
+}
+
+.panel {
+    padding: 1.25rem;
+    border: 2px solid #b7c7d8;
+    border-radius: 0.75rem;
+    background: var(--white);
+    box-shadow: 0 5px 14px rgba(23, 42, 70, 0.1);
+}
+
+.feature-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 6px solid var(--gold);
+    background: #edf4fa;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    padding: 1.1rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.6rem;
+    background: #edf4fa;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--navy);
+}
+
+.skills-panel ul,
+.find-panel ul {
+    padding-left: 1.25rem;
+}
+
+.skills-panel li,
+.find-panel li {
+    margin-bottom: 0.55rem;
+}
+
+address {
+    padding: 1rem;
+    border: 2px solid var(--gold);
+    border-radius: 0.5rem;
+    background: var(--pale-gold);
+    font-style: normal;
+}
+
+address a {
+    overflow-wrap: anywhere;
+}
+
+.site-footer {
+    padding: 1.25rem 1rem;
+    border-top: 6px solid var(--gold);
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Tablet: navigation becomes horizontal and content uses two columns. */
+@media (min-width: 600px) {
+    .site-header {
+        padding: 2.75rem 2rem;
+    }
+
+    .site-nav ul {
+        flex-direction: row;
+    }
+
+    .site-nav li {
+        flex: 1 1 0;
+    }
+
+    .home-grid,
+    .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .panel {
+        padding: 1.6rem;
+    }
+}
+
+/* Desktop: featured projects expand to three columns. */
+@media (min-width: 960px) {
+    .page-grid {
+        gap: 1.75rem;
+        margin: 2rem auto;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .featured-projects {
+        padding: 2rem;
+    }
+}

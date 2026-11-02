@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aiken's Portfolio | Projects and Work</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1>Projects and Work</h1>
         <p>A collection of work that represents my technical learning, experimentation, and growth.</p>
 
-        <nav aria-label="Main navigation">
+        <nav class="site-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html" aria-current="page">Projects and Work</a></li>
@@ -19,27 +20,29 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="page-grid">
+        <section class="panel featured-projects">
             <h2>Featured Projects</h2>
 
-            <article>
-                <h3>Humanity and the Future of Technology</h3>
-                <p>A semantic HTML webpage examining how technology reflects human intentions and changes society in return.</p>
-            </article>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Humanity and the Future of Technology</h3>
+                    <p>A semantic HTML webpage examining how technology reflects human intentions and changes society in return.</p>
+                </article>
 
-            <article>
-                <h3>Cybersecurity Lab Collection</h3>
-                <p>A future collection of labs involving Linux, secure remote access, system configuration, and network protection.</p>
-            </article>
+                <article class="project-card">
+                    <h3>Cybersecurity Lab Collection</h3>
+                    <p>A future collection of labs involving Linux, secure remote access, system configuration, and network protection.</p>
+                </article>
 
-            <article>
-                <h3>Connected Computer Systems Project</h3>
-                <p>A planned project that will connect programming, databases, networks, and operating systems into one meaningful system.</p>
-            </article>
+                <article class="project-card">
+                    <h3>Connected Computer Systems Project</h3>
+                    <p>A planned project that will connect programming, databases, networks, and operating systems into one meaningful system.</p>
+                </article>
+            </div>
         </section>
 
-        <section>
+        <section class="panel skills-panel">
             <h2>Skills in Development</h2>
             <ul>
                 <li>Semantic HTML and web structure</li>
@@ -50,7 +53,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 Aiken. Portfolio scaffold created with semantic HTML.</p>
     </footer>
 </body>
