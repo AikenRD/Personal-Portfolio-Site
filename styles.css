@@ -7,6 +7,12 @@
     --white: #ffffff;
     --ink: #202936;
     --muted: #536174;
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
 }
 
 * {
@@ -23,26 +29,25 @@ body {
     overflow-x: hidden;
     background: var(--cloud);
     color: var(--ink);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     line-height: 1.6;
 }
 
 h1,
 h2,
-h3,
+h3 {
+    overflow-wrap: anywhere;
+    font-family: "Space Grotesk", Arial, sans-serif;
+    line-height: 1.2;
+}
+
 p {
     overflow-wrap: anywhere;
 }
 
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-}
-
 h2 {
     margin-top: 0;
-    padding-bottom: 0.45rem;
+    padding-bottom: var(--space-1);
     border-bottom: 3px solid var(--gold);
     color: var(--navy);
 }
@@ -52,7 +57,7 @@ a {
 }
 
 .site-header {
-    padding: 2rem 1rem;
+    padding: var(--space-4) var(--space-2);
     border-bottom: 7px solid var(--gold);
     background: var(--navy);
     color: var(--white);
@@ -61,14 +66,14 @@ a {
 
 .site-header > p {
     max-width: 760px;
-    margin: 0.75rem auto 1.5rem;
+    margin: var(--space-1) auto var(--space-3);
     color: var(--pale-gold);
 }
 
 .site-nav ul {
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
+    gap: var(--space-1);
     width: min(100%, 760px);
     margin: 0 auto;
     padding: 0;
@@ -82,9 +87,9 @@ a {
 .site-nav a {
     display: block;
     width: 100%;
-    padding: 0.7rem 0.85rem;
+    padding: var(--space-1) var(--space-2);
     border: 2px solid var(--gold);
-    border-radius: 0.45rem;
+    border-radius: 8px;
     color: var(--white);
     text-decoration: none;
 }
@@ -99,9 +104,9 @@ a {
 .page-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.25rem;
-    width: min(100% - 1.5rem, 1120px);
-    margin: 1.5rem auto;
+    gap: var(--space-2);
+    width: min(calc(100% - var(--space-3)), 1120px);
+    margin: var(--space-3) auto;
 }
 
 .panel,
@@ -111,16 +116,16 @@ a {
 }
 
 .panel {
-    padding: 1.25rem;
+    padding: var(--space-2);
     border: 2px solid #b7c7d8;
-    border-radius: 0.75rem;
+    border-radius: 16px;
     background: var(--white);
-    box-shadow: 0 5px 14px rgba(23, 42, 70, 0.1);
+    box-shadow: 0 8px 16px rgba(23, 42, 70, 0.1);
 }
 
 .feature-box {
-    margin-top: 1rem;
-    padding: 1rem;
+    margin-top: var(--space-2);
+    padding: var(--space-2);
     border-left: 6px solid var(--gold);
     background: #edf4fa;
 }
@@ -128,13 +133,13 @@ a {
 .project-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
+    gap: var(--space-2);
 }
 
 .project-card {
-    padding: 1.1rem;
+    padding: var(--space-2);
     border: 2px solid var(--blue);
-    border-radius: 0.6rem;
+    border-radius: 8px;
     background: #edf4fa;
 }
 
@@ -145,18 +150,18 @@ a {
 
 .skills-panel ul,
 .find-panel ul {
-    padding-left: 1.25rem;
+    padding-left: var(--space-3);
 }
 
 .skills-panel li,
 .find-panel li {
-    margin-bottom: 0.55rem;
+    margin-bottom: var(--space-1);
 }
 
 address {
-    padding: 1rem;
+    padding: var(--space-2);
     border: 2px solid var(--gold);
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background: var(--pale-gold);
     font-style: normal;
 }
@@ -165,8 +170,22 @@ address a {
     overflow-wrap: anywhere;
 }
 
+#welcome,
+#projects,
+#contact {
+    scroll-margin-top: var(--space-3);
+}
+
+#projects {
+    border-color: var(--blue);
+}
+
+#contact {
+    border-color: var(--gold);
+}
+
 .site-footer {
-    padding: 1.25rem 1rem;
+    padding: var(--space-3) var(--space-2);
     border-top: 6px solid var(--gold);
     background: var(--navy);
     color: var(--white);
@@ -180,7 +199,7 @@ address a {
 /* Tablet: navigation becomes horizontal and content uses two columns. */
 @media (min-width: 600px) {
     .site-header {
-        padding: 2.75rem 2rem;
+        padding: var(--space-5) var(--space-4);
     }
 
     .site-nav ul {
@@ -201,15 +220,15 @@ address a {
     }
 
     .panel {
-        padding: 1.6rem;
+        padding: var(--space-3);
     }
 }
 
 /* Desktop: featured projects expand to three columns. */
 @media (min-width: 960px) {
     .page-grid {
-        gap: 1.75rem;
-        margin: 2rem auto;
+        gap: var(--space-4);
+        margin: var(--space-4) auto;
     }
 
     .project-grid {
@@ -217,6 +236,6 @@ address a {
     }
 
     .featured-projects {
-        padding: 2rem;
+        padding: var(--space-4);
     }
 }
