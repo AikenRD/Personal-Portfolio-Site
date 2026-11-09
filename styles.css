@@ -56,6 +56,33 @@ a {
     color: var(--blue);
 }
 
+a:focus-visible {
+    outline: 4px solid var(--gold);
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: fixed;
+    top: var(--space-1);
+    left: var(--space-1);
+    z-index: 1000;
+    padding: var(--space-1) var(--space-2);
+    border: 2px solid var(--navy);
+    border-radius: 8px;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+#main-content:focus {
+    outline: none;
+}
+
 .site-header {
     padding: var(--space-4) var(--space-2);
     border-bottom: 7px solid var(--gold);
