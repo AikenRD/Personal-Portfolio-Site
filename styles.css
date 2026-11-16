@@ -197,6 +197,98 @@ address a {
     overflow-wrap: anywhere;
 }
 
+.contact-form {
+    margin-top: var(--space-3);
+}
+
+.contact-form fieldset {
+    margin: 0 0 var(--space-3);
+    padding: var(--space-2);
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+}
+
+.contact-form legend {
+    padding: 0 var(--space-1);
+    color: var(--navy);
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-weight: 700;
+}
+
+.form-field {
+    margin-bottom: var(--space-2);
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: var(--space-1);
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+    outline: 4px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.form-field [aria-invalid="true"] {
+    border-color: #a61b1b;
+    background: #fff5f5;
+}
+
+.field-hint,
+.error-message,
+.form-status {
+    margin: var(--space-1) 0 0;
+    font-size: 0.95rem;
+}
+
+.field-hint {
+    color: var(--muted);
+}
+
+.error-message,
+.form-status.error {
+    color: #8f1010;
+    font-weight: 700;
+}
+
+.form-status.success {
+    margin-bottom: var(--space-2);
+    padding: var(--space-2);
+    border-left: 6px solid #176b3a;
+    background: #eaf7ef;
+    color: #124f2d;
+}
+
+.contact-form button {
+    min-height: 48px;
+    padding: 12px var(--space-3);
+    border: 2px solid var(--navy);
+    border-radius: 8px;
+    background: var(--gold);
+    color: var(--navy);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--pale-gold);
+}
+
 #welcome,
 #projects,
 #contact {
